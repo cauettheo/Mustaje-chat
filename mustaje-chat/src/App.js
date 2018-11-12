@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import Profile from './components/profile.js'
-import './css/foundation.css';
-import './css/app.css';
+import Foundation, {Callout, Link, Menu, MenuItem} from 'react-foundation';
+import {BadgeColors as Colors, ButtonGroupSizes as Sizes, FloatTypes as Alignment} from "react-foundation/src/enums";
 
 class App extends Component {
   render() {
     return (
-        <header>
-            <ul className="menu align-center">
-                <li><a href='#'>Messages</a></li>
-                <li><a href="/components/profile">Profil</a></li>
-            </ul>
-        </header>
-        <Profile />
+        <div>
+            <Menu alignment={Alignment.CENTER}>
+                <MenuItem isActive><a>Home</a></MenuItem>
+                <MenuItem><a>Messages</a></MenuItem>
+                <MenuItem><a>Profile</a></MenuItem>
+            </Menu>
+        </div>
     );
   }
 }
